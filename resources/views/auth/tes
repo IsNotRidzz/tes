@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  @if (session('status'))
+    <div class="alert alert-success">
+       {{ session('status')}}
+       </div>
+  <form action=" /content/store" method="post">
+          @csrf
+    <label for="nama_jurusan">nama jurusan</label><br>
+    
+    <input type="text" name="nama_jurusan"><br>
+    <label for="bidang">bidang</label><br>
+    <textarea name="bidang" id="" cols="30" rows="10"></textarea><br>
+    <label for="gambar">nama jurusan</label><br>
+    <input type="text" name="gambar"><br>
+    <button>Simpan</button>
+  </form>
+</body>
+</html>
